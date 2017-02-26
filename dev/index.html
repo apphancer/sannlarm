@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sannlarm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <!-- build:css stylesheets/main.css -->
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css"/>
+    <link rel="stylesheet" href="../bower_components/bootstrap-toggle/css/bootstrap-toggle.css">
+    <!-- endbuild -->
+
+</head>
+<body>
+<div class="container">
+
+    <div class="row sannlarm-row">
+        <div class="col-xs-12 col-md-12">
+            <h1><span class="glyphicon glyphicon-certificate"></span> Sannlarm</h1>
+        </div>
+    </div>
+
+    <div class="row sannlarm-row">
+        <div class="col-xs-12 col-md-12">
+            <input type="range" id="dimmer_slider" min="0" max="100" value="50" step="1"/>
+            <p id="dimmer-value"><span>50</span>%</p>
+        </div>
+    </div>
+
+
+    <div class="row sannlarm-row">
+        <div class="col-xs-6 col-md-2">
+            <div class="input-group date" id="datetimepicker">
+                <input type="text" class="form-control" value="06:00" id="alarm-time" />
+                <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-6">
+            <input type="checkbox" checked data-toggle="toggle" data-onstyle="success" id="alarm-switch">
+        </div>
+        <div class="col-xs-12 col-md-12">
+            <p id="alarm-feedback">Next Alarm: <strong>xxx</strong></p>
+        </div>
+    </div>
+
+
+
+    <div class="row sannlarm-row">
+        <div class="col-xs-6 col-md-6">
+            <label>Light</label>
+            <input type="checkbox" checked data-toggle="toggle" data-onstyle="success" id="light-switch">
+        </div>
+        <div class="col-xs-6 col-md-6">
+
+        </div>
+    </div>
+
+
+    <div class="row sannlarm-row">
+        <div class="col-xs-12 col-md-12">
+            <button type="button" class="btn btn-primary btn-lg btn-block" id="start-sunset">Turn off with Sunset</button>
+        </div>
+    </div>
+</div>
+
+<!-- build:js scripts/main.js -->
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="../bower_components/moment/min/moment.min.js"></script>
+<script type="text/javascript" src="../bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+<script src="../bower_components/bootstrap-toggle/js/bootstrap-toggle.js"></script>
+<script type="text/javascript" src="./javascripts/app.js"></script>
+<!-- endbuild -->
+</body>
+</html>

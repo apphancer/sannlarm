@@ -1,0 +1,31 @@
+{
+  "name": "sannlarm",
+  "version": "1.0.0",
+  "description": "Raising sun alarm with Arduino, Raspberry pi and MEAN",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "raspberry pi",
+    "arduino",
+    "MEAN",
+    "alarm"
+  ],
+  "authors": [
+    "Martin Sarsini"
+  ],
+  "license": "MIT",
+  "homepage": "http://apphancer.com/blog",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.7",
+    "font-awesome": "~4.7.0",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.45",
+    "socket.io-client": "^1.7.2"
+  }
+}
